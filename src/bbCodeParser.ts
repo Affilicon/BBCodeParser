@@ -36,7 +36,7 @@ var tagsToReplace = {
 };
 
 //Escapes the given html
-function escapeHTML(html) {
+export function escapeHTML(html) {
     return html.replace(/[&<>]/g, function (tag) {
         return tagsToReplace[tag] || tag;
     });
