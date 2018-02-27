@@ -4,20 +4,12 @@ An extensible BB code parser written in TypeScript that can be used
 both in the browser and Node.js.
 
 # Usage
-```javascript
-<script src="bbCodeParser.min.js"></script>
-...
+```typescript
+import {BBCodeParser} from "bbcode-parser/src/bbCodeParser";
+
 var parser = new BBCodeParser(BBCodeParser.defaultTags());
 var inputText = "[b]Bold text[/b]";
 var generatedHtml = parser.parseString(inputText);
-```
-
-Node.js: `npm install bbcode-parser`
-
-``` javascript
-var BBCodeParser = require('bbcode-parser');
-var parser = new BBCodeParser(BBCodeParser.defaultTags());
-var html = parser.parseString('[b]Bold text[/b]');
 ```
 
 # Custom tags
@@ -29,7 +21,10 @@ var html = parser.parseString('[b]Bold text[/b]');
 * tagGenerator: The HTML generator for the tag. If not supplied the default one is used: `<tagName>content</tagName>`.
 
 ```javascript
-var bbTags = {};
+import {BBCodeParser} from "bbcode-parser/src/bbCodeParser";
+import {BBTag} from "bbcode-parser/src/bbTag";
+
+let bbTags = {};
 
 //Simple tag. A simple tag means that the generated HTML will be <tagName>content</tagName>
 bbTags["b"] = BBTag.createSimpleTag("b");
@@ -41,7 +36,7 @@ bbTags["img"] = BBTag.createSimpleTag("img", function (tag, content, attr) {
 
 //Tag with a custom generator + attributes
 bbTags["url"] = BBTag.createSimpleTag("url", function (tag, content, attr) {
-	var link = content;
+	let link = content;
 
 	if (attr["site"] != undefined) {
 		link = escapeHTML(attr["site"]);
@@ -59,7 +54,7 @@ bbTags["code"] = new BBTag("code", true, false, true, function (tag, content, at
     return "<code>" + content + "</code>";
 });
 
-var parser = new BBCodeParser(bbTags);
+const parser = new BBCodeParser(bbTags);
 ```
 
 # Documentation
