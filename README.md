@@ -7,9 +7,9 @@ both in the browser and Node.js.
 ```typescript
 import {BBCodeParser} from "bbcode-parser/src/bbCodeParser";
 
-var parser = new BBCodeParser(BBCodeParser.defaultTags());
-var inputText = "[b]Bold text[/b]";
-var generatedHtml = parser.parseString(inputText);
+const parser = new BBCodeParser(BBCodeParser.defaultTags());
+const inputText = "[b]Bold text[/b]";
+const generatedHtml = parser.parseString(inputText);
 ```
 
 # Custom tags
