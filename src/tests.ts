@@ -1,6 +1,8 @@
-﻿/// <reference path="tsUnit.ts" />
-/// <reference path="tokenizer.ts" />
-/// <reference path="bbCodeParseTree.ts" />
+﻿import {BBTag} from "./bbTag";
+import {BBCodeParser, endsWith, startsWith} from "./bbCodeParser";
+import {BBCodeParseTree} from "./bbCodeParseTree";
+import {Tokenizer} from "./tokenizer";
+import {Token, TokenType} from "./tokenizer";
 
 //Tests the tokenizer
 class TestTokenizer extends tsUnit.TestClass {

@@ -1,8 +1,8 @@
-/// <reference path="bbCodeParseTree.ts" />
-/// <reference path="bbTag.ts" />
+import {BBTag} from "./bbTag";
+import {BBCodeParseTree, TreeType} from "./bbCodeParseTree";
 
 //Indicates if the first string ends with the second str
-function endsWith(str: string, endStr: string) {
+export function endsWith(str: string, endStr: string) {
     if (str.length == 0) {
         return false;
     }
@@ -16,7 +16,7 @@ function endsWith(str: string, endStr: string) {
 }
 
 //Indicates if the first string starts with the second string
-function startsWith(str: string, startStr: string) {
+export function startsWith(str: string, startStr: string) {
     if (str.length == 0) {
         return false;
     }
@@ -158,3 +158,5 @@ class BBCodeParser {
         return endsWith(str, endStr);
     }
 }
+
+export {BBCodeParser};

@@ -1,5 +1,5 @@
 ﻿//Represents a BB tag
-class BBTag {
+export class BBTag {
     //Creates a new BB tag
     constructor(
         public tagName: string, //The name of the tag

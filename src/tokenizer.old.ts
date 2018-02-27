@@ -1,7 +1,9 @@
-﻿/// <reference path="bbCodeParser.ts" />
+﻿import {BBCodeParser, endsWith, startsWith} from "./bbCodeParser";
+import {Token, TokenType, Tokenizer} from "./tokenizer";
+import {BBTag} from "./bbTag";
 
 //Represents a tokenizer
-class TokenizerOld {
+export class TokenizerOld {
     //Creates a new tokenizer with the given tags
     constructor(private bbTags: Array<BBTag>) {
 
