@@ -30,28 +30,30 @@ let bbTags = {};
 bbTags["b"] = BBTag.createSimpleTag("b");
 
 //Tag with a custom generator.
-bbTags["img"] = BBTag.createSimpleTag("img", function (tag, content, attr) {
-	return "<img src=\"" + content + "\" />";
-});
+bbTags["img"] = BBTag.createSimpleTag("img", (tag, content, attr) => `<img src="${content}" />`);
 
 //Tag with a custom generator + attributes
-bbTags["url"] = BBTag.createSimpleTag("url", function (tag, content, attr) {
-	let link = content;
-
-	if (attr["site"] != undefined) {
-		link = escapeHTML(attr["site"]);
- 	}
-
-	if (!startsWith(link, "http://") && !startsWith(link, "https://")) {
-		link = "http://" + link;
-	}
-
-	return "<a href=\"" + link + "\" target=\"_blank\">" + content + "</a>";
+bbTags["url"] = BBTag.createSimpleTag("url", (tag, content, attr) => {
+	
+  let link = content;
+  
+  if (attr["site"] != undefined) {
+    link = escapeHTML(attr["site"]);
+  }
+    
+  if (!startsWith(link, "http://") && !startsWith(link, "https://")) {
+    link = "http://" + link;
+  }
+    
+  return `<a href="${link}" target="_blank">${content}</a>`;
+  
 });
 
 //A tag that doesn't support nested tags. Useful when implementing code highlighting.
-bbTags["code"] = new BBTag("code", true, false, true, function (tag, content, attr) {
+bbTags["code"] = new BBTag("code", true, false, true, (tag, content, attr) => {
+  
     return "<code>" + content + "</code>";
+    
 });
 
 const parser = new BBCodeParser(bbTags);
