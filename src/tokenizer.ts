@@ -123,7 +123,7 @@ export class Tokenizer {
 
     //Gets the tokens from the given string
     getTokens(str: string) {
-        var pattern = "\\[(\/[\\w*]*)\\]|\\[([\\w*]*)+(=([\"])" + attrValueChars + "*\\4)?( (" + attrNameChars + "+)?=([\"])(" + attrValueChars + "+)\\7)*\\]";
+        var pattern = "\\[(\/[\\w*]*)\\]|\\[([\\w*]*)+(=([\"]?)" + attrValueChars + "*\\4)?( (" + attrNameChars + "+)?=([\"]?)(" + attrValueChars + "+)\\7)*\\]";
         var tagPattern = new RegExp(pattern, "g");
         var tokens = new Array<Token>();
 
