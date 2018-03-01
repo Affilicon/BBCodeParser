@@ -5,7 +5,7 @@ both in the browser and Node.js.
 
 # Usage
 ```typescript
-import {BBCodeParser} from "bbcode-parser/src/bbCodeParser";
+import {BBCodeParser, escapeHTML, startsWith} from "bbcode-parser/src/bbCodeParser";
 
 const parser = new BBCodeParser(BBCodeParser.defaultTags());
 const inputText = "[b]Bold text[/b]";
