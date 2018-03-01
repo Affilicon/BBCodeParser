@@ -5,7 +5,7 @@ both in the browser and Node.js.
 
 # Usage
 ```typescript
-import {BBCodeParser, escapeHTML, startsWith} from "bbcode-parser/src/bbCodeParser";
+import {BBCodeParser} from "bbcode-parser/src/bbCodeParser";
 
 const parser = new BBCodeParser(BBCodeParser.defaultTags());
 const inputText = "[b]Bold text[/b]";
@@ -21,7 +21,7 @@ const generatedHtml = parser.parseString(inputText);
 * tagGenerator: The HTML generator for the tag. If not supplied the default one is used: `<tagName>content</tagName>`.
 
 ```javascript
-import {BBCodeParser} from "bbcode-parser/src/bbCodeParser";
+import {BBCodeParser, escapeHTML, startsWith} from "bbcode-parser/src/bbCodeParser";
 import {BBTag} from "bbcode-parser/src/bbTag";
 
 let bbTags = {};
