@@ -1,8 +1,2 @@
-src/bin
-src/obj
-src/BBCodeParser.csproj.user
-src/web.config
-src/*.js
-src/*.js.map
-src/BBCodeParser.*.suo
-npm
+dist
+node_modules
