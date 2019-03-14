@@ -1,4 +1,3 @@
-import {BBCodeParser} from "./bbCodeParser";
 import {BBTag} from "./bbTag";
 
 //The type of a token

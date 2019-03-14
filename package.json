@@ -1,11 +1,17 @@
 {
   "name": "@affilicon/bbcode-parser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/affilicon/BBCodeParser.git"
+  },
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -cw"
@@ -14,5 +20,61 @@
     "rollup": "^1.1.0",
     "rollup-plugin-typescript2": "^0.18.1",
     "typescript": "^3.2.2"
-  }
+  },
+  "description": "Original repo: https://github.com/svenslaggare/BBCodeParser",
+  "bugs": {
+    "url": "https://github.com/affilicon/BBCodeParser/issues"
+  },
+  "homepage": "https://github.com/affilicon/BBCodeParser#readme",
+  "dependencies": {
+    "acorn": "^6.0.5",
+    "arr-diff": "^2.0.0",
+    "arr-flatten": "^1.1.0",
+    "array-unique": "^0.2.1",
+    "braces": "^1.8.5",
+    "estree-walker": "^0.5.2",
+    "expand-brackets": "^0.1.5",
+    "expand-range": "^1.8.2",
+    "extglob": "^0.3.2",
+    "filename-regex": "^2.0.1",
+    "fill-range": "^2.2.4",
+    "for-in": "^1.0.2",
+    "for-own": "^0.1.5",
+    "fs-extra": "^7.0.0",
+    "g": "^2.0.1",
+    "glob-base": "^0.3.0",
+    "glob-parent": "^2.0.0",
+    "graceful-fs": "^4.1.15",
+    "is-buffer": "^1.1.6",
+    "is-dotfile": "^1.0.3",
+    "is-equal-shallow": "^0.1.3",
+    "is-extendable": "^0.1.1",
+    "is-extglob": "^1.0.0",
+    "is-glob": "^2.0.1",
+    "is-number": "^2.1.0",
+    "is-posix-bracket": "^0.1.1",
+    "is-primitive": "^2.0.0",
+    "isarray": "^1.0.0",
+    "isobject": "^2.1.0",
+    "jsonfile": "^4.0.0",
+    "kind-of": "^3.2.2",
+    "math-random": "^1.0.2",
+    "micromatch": "^2.3.11",
+    "normalize-path": "^2.1.1",
+    "object.omit": "^2.0.1",
+    "parse-glob": "^3.0.4",
+    "path-parse": "^1.0.6",
+    "preserve": "^0.2.0",
+    "randomatic": "^3.1.1",
+    "regex-cache": "^0.4.4",
+    "remove-trailing-separator": "^1.1.0",
+    "repeat-element": "^1.1.3",
+    "repeat-string": "^1.6.1",
+    "resolve": "^1.8.1",
+    "rollup-pluginutils": "^2.3.3",
+    "tslib": "^1.9.3",
+    "uglify-js": "^3.4.9",
+    "universalify": "^0.1.2"
+  },
+  "author": "Anton Jansson / AffiliCon GmbH"
 }
